@@ -28,3 +28,6 @@ One line of the dataset is the following with the actual informations:
 ## Run
 You can run the training and test process from Jupyter Notebook. The training process contains the evaluation and the statistics plotting.
 
+## Author
+
+* **Karoly Poka** - *Electrical Engineer Bsc (BME)*
