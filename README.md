@@ -28,6 +28,9 @@ One line of the dataset is the following with the actual informations:
 ## Run
 You can run the training and test process from Jupyter Notebook. The training process contains the evaluation and the statistics plotting.
 
+## Origin of the dataset
+I used the following website to extraxt the temperature data: http://idojarasbudapest.hu/archivalt-idojaras
+
 ## Author
 
 * **Karoly Poka** - *Electrical Engineer Bsc (BME)*
