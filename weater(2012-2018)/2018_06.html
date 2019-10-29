@@ -1,0 +1,400 @@
+
+<!DOCTYPE HTML>
+<html lang="hu">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Archivált budapesti időjárás - idojarasbudapest.hu</title>
+    <meta name="description" content="Honlap működése óta (2011) archivált budapesti időjárás, maximális/minimális hőmérséklet, szélsebesség és csapadék mennyisége">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <script>
+		/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}	
+	</script>
+
+    <link rel="stylesheet" href="/css/morris.css">
+    <script src="/css/jquery.min.js"></script>
+    <script src="/css/raphael-min.js"></script>
+    <script src="/css/morris.min.js"></script>
+
+</head>
+
+<body>
+<div class="tartalom"><a name="top"></a><a href="http://idojarasbudapest.hu"><img src="kepek/logo.png" width="260" height="60" border="0"></a></div>
+<div style="background-color:#039">
+<div class="tartalom">
+    <div class="topnav" id="myTopnav">
+      <a href="/">Budapesti</a>
+      <a href="/archivalt-idojaras" class="active">Archivált</a>
+      <a href="/magyarorszagi">Magyarország</a>
+      <a href="/kulfoldi">Külföld</a>
+      <a href="/sugo">Súgó</a>
+      <a href="javascript:void(0);" class="icon" onClick="myFunction()">&#9776;</a>
+    </div>
+</div>
+</div>
+
+	<div class="tartalom" style="box-shadow: 1px 1px 10px#39F; padding:4px;">
+	
+	  <h1>Archivált budapesti időjárás</h1>
+	  <p><strong>2011. szeptember 29</strong> óta a honlapunk rögzíti a lekérdezett legfontosabb időjárási adatokat.	Eleinte csak maximális/minimális hőmérséklet és a szél sebessége, majd az időjárás típusa is rögzítve lett. Sajnos, 2017. június 2-án a worldweatheronline majd a weather.com is megszűntették az időjárás adatszolgáltatást. 2017. július 25 óta új szolgáltató (<a href="http://openweathermap.org/" target="_blank">openweathermap.org</a>) adatait használjuk. Onnantól rögzítésre kerültek a <strong>hőmérsékletek</strong> [°C]-ban, legnagyobb <strong>szélsebesség</strong> (3 órás átlag, [m/s]-ban) és a napi <strong>csapadék</strong> mennyisége [mm]-ben. </p>
+
+<div style="margin:8px 0">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- vreme -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1769325926847630"
+     data-ad-slot="2101239104"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+    <p>Ha tetszik a honlapunk, megköszönjük a visszajelzést:    
+                <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fidojarasbudapest.hu&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px; margin-top:6px;" allowTransparency="true"></iframe>
+</p>
+      
+      
+	  <p>Melyik hónap érdekli?</p>
+	  <form name="form1" method="post" action="archivalt-idojaras">
+	    <select name="ev" id="ev">
+        	      <option>2011</option>
+	      <option>2012</option>
+	      <option>2013</option>
+	      <option>2014</option>
+	      <option>2015</option>
+	      <option>2016</option>
+	      <option>2017</option>
+	      <option selected>2018</option>
+	      <option>2019</option>
+        </select>
+        <select name="ho" id="ho">
+                  <option value="01">Január</option>          <option value="02">Február</option>          <option value="03">Március</option>          <option value="04">Április</option>          <option value="05">Május</option>          <option value="06" selected>Június</option>          <option value="07">Július</option>          <option value="08">Augusztus</option>          <option value="09">Szeptember</option>          <option value="10">Október</option>          <option value="11">November</option>          <option value="12">December</option>        </select>
+	    <input type="submit" name="button" id="button" value="Mehet">
+	  </form>
+<p>&nbsp;</p>
+  <div id="myfirstchart" style="height: 350px;"></div>
+ 
+          <script>
+        new Morris.Line({
+          element: 'myfirstchart',
+          data: [
+        { date: '2018-06-01', gy1: 28.4, gy2: 18.1},
+{ date: '2018-06-02', gy1: 26.9, gy2: 18.5},
+{ date: '2018-06-03', gy1: 27.2, gy2: 20},
+{ date: '2018-06-04', gy1: 26.4, gy2: 17.3},
+{ date: '2018-06-05', gy1: 26.4, gy2: 17.9},
+{ date: '2018-06-06', gy1: 21.7, gy2: 17.3},
+{ date: '2018-06-07', gy1: 23.4, gy2: 16.2},
+{ date: '2018-06-08', gy1: 24.6, gy2: 17.6},
+{ date: '2018-06-09', gy1: 23.6, gy2: 17.7},
+{ date: '2018-06-10', gy1: 27.8, gy2: 19.1},
+{ date: '2018-06-11', gy1: 28.5, gy2: 21.5},
+{ date: '2018-06-12', gy1: 27.7, gy2: 19.2},
+{ date: '2018-06-13', gy1: 24.9, gy2: 18},
+{ date: '2018-06-14', gy1: 20.6, gy2: 17},
+{ date: '2018-06-15', gy1: 19.8, gy2: 17.4},
+{ date: '2018-06-16', gy1: 24.1, gy2: 18.2},
+{ date: '2018-06-17', gy1: 25.1, gy2: 18.8},
+{ date: '2018-06-18', gy1: 25.4, gy2: 18.2},
+{ date: '2018-06-19', gy1: 26.7, gy2: 19.3},
+{ date: '2018-06-20', gy1: 27.5, gy2: 20.4},
+{ date: '2018-06-21', gy1: 27.9, gy2: 20.1},
+{ date: '2018-06-22', gy1: 19, gy2: 13.7},
+{ date: '2018-06-23', gy1: 19.1, gy2: 11},
+{ date: '2018-06-24', gy1: 18.5, gy2: 10.4},
+{ date: '2018-06-25', gy1: 20.8, gy2: 10.4},
+{ date: '2018-06-26', gy1: 21.9, gy2: 11.6},
+{ date: '2018-06-27', gy1: 22.3, gy2: 13.3},
+{ date: '2018-06-28', gy1: 21.9, gy2: 15.8},
+{ date: '2018-06-29', gy1: 25.5, gy2: 18.2},
+{ date: '2018-06-30', gy1: 20.8, gy2: 14.1},
+          ],
+          xkey: 'date',
+          ykeys: ['gy1','gy2'],
+          labels: ['Tmax','Tmin'],
+		  lineColors: ['#F00','#00F']
+        });
+        </script>
+        
+        
+<table border="1" style="font-size:14px;">
+  <tr>
+    <th>Nap</th>
+    <th>T<sub>max</sub><br />
+      [°C]</th>
+    <th>T<sub>min</sub><br />
+    [°C]</th>
+    <th>Szél<br>
+	[m/s]</th>
+    <th>Csapadék<br>
+	[mm]</th>
+  </tr>
+        
+        
+	<strong>Több részlet: Tmin, Tmax, Szél, Csapadék vagy egyéb infó: </strong><br>  <tr>
+    <td>2018.06.01<br>péntek</td>
+    <td align="center">28.4</td>
+    <td align="center">18.1</td>
+    <td align="center">2.5</td>
+    <td align="center">0
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.02<br>szombat</td>
+    <td align="center">26.9</td>
+    <td align="center">18.5</td>
+    <td align="center">4</td>
+    <td align="center">0
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.03<br>vasárnap</td>
+    <td align="center">27.2</td>
+    <td align="center">20</td>
+    <td align="center">5.8</td>
+    <td align="center">0
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.04<br>hétfő</td>
+    <td align="center">26.4</td>
+    <td align="center">17.3</td>
+    <td align="center">2.9</td>
+    <td align="center">2.4
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.05<br>kedd</td>
+    <td align="center">26.4</td>
+    <td align="center">17.9</td>
+    <td align="center">2.1</td>
+    <td align="center">6.5
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.06<br>szerda</td>
+    <td align="center">21.7</td>
+    <td align="center">17.3</td>
+    <td align="center">6</td>
+    <td align="center">18.7
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.07<br>csütörtök</td>
+    <td align="center">23.4</td>
+    <td align="center">16.2</td>
+    <td align="center">5.2</td>
+    <td align="center">0.9
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.08<br>péntek</td>
+    <td align="center">24.6</td>
+    <td align="center">17.6</td>
+    <td align="center">3</td>
+    <td align="center">26.1
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.09<br>szombat</td>
+    <td align="center">23.6</td>
+    <td align="center">17.7</td>
+    <td align="center">3.1</td>
+    <td align="center">31
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.10<br>vasárnap</td>
+    <td align="center">27.8</td>
+    <td align="center">19.1</td>
+    <td align="center">2.4</td>
+    <td align="center">0
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.11<br>hétfő</td>
+    <td align="center">28.5</td>
+    <td align="center">21.5</td>
+    <td align="center">3.4</td>
+    <td align="center">0
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.12<br>kedd</td>
+    <td align="center">27.7</td>
+    <td align="center">19.2</td>
+    <td align="center">4.5</td>
+    <td align="center">9
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.13<br>szerda</td>
+    <td align="center">24.9</td>
+    <td align="center">18</td>
+    <td align="center">4.3</td>
+    <td align="center">1.7
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.14<br>csütörtök</td>
+    <td align="center">20.6</td>
+    <td align="center">17</td>
+    <td align="center">4.5</td>
+    <td align="center">10.8
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.15<br>péntek</td>
+    <td align="center">19.8</td>
+    <td align="center">17.4</td>
+    <td align="center">5.3</td>
+    <td align="center">6.2
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.16<br>szombat</td>
+    <td align="center">24.1</td>
+    <td align="center">18.2</td>
+    <td align="center">5.9</td>
+    <td align="center">0
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.17<br>vasárnap</td>
+    <td align="center">25.1</td>
+    <td align="center">18.8</td>
+    <td align="center">4.3</td>
+    <td align="center">0
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.18<br>hétfő</td>
+    <td align="center">25.4</td>
+    <td align="center">18.2</td>
+    <td align="center">5.1</td>
+    <td align="center">0.3
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.19<br>kedd</td>
+    <td align="center">26.7</td>
+    <td align="center">19.3</td>
+    <td align="center">3.9</td>
+    <td align="center">2.7
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.20<br>szerda</td>
+    <td align="center">27.5</td>
+    <td align="center">20.4</td>
+    <td align="center">2.5</td>
+    <td align="center">0
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.21<br>csütörtök</td>
+    <td align="center">27.9</td>
+    <td align="center">20.1</td>
+    <td align="center">3.8</td>
+    <td align="center">0.6
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.22<br>péntek</td>
+    <td align="center">19</td>
+    <td align="center">13.7</td>
+    <td align="center">7.6</td>
+    <td align="center">6.3
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.23<br>szombat</td>
+    <td align="center">19.1</td>
+    <td align="center">11</td>
+    <td align="center">5.1</td>
+    <td align="center">0
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.24<br>vasárnap</td>
+    <td align="center">18.5</td>
+    <td align="center">10.4</td>
+    <td align="center">5.4</td>
+    <td align="center">0
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.25<br>hétfő</td>
+    <td align="center">20.8</td>
+    <td align="center">10.4</td>
+    <td align="center">2.7</td>
+    <td align="center">0
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.26<br>kedd</td>
+    <td align="center">21.9</td>
+    <td align="center">11.6</td>
+    <td align="center">3</td>
+    <td align="center">0.3
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.27<br>szerda</td>
+    <td align="center">22.3</td>
+    <td align="center">13.3</td>
+    <td align="center">6.3</td>
+    <td align="center">1.3
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.28<br>csütörtök</td>
+    <td align="center">21.9</td>
+    <td align="center">15.8</td>
+    <td align="center">6.5</td>
+    <td align="center">11.9
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.29<br>péntek</td>
+    <td align="center">25.5</td>
+    <td align="center">18.2</td>
+    <td align="center">5.2</td>
+    <td align="center">8.4
+</td>
+  </tr>
+  <tr>
+    <td>2018.06.30<br>szombat</td>
+    <td align="center">20.8</td>
+    <td align="center">14.1</td>
+    <td align="center">7.7</td>
+    <td align="center">0
+</td>
+  </tr>
+</table>
+
+
+<div align="right"><a href="#top"><img src="/kepek/top.png" border="0"></a>
+</div>
+
+
+</div>
+
+
+<footer>
+		<p>&copy; 2017 idojarasbudapest.hu, <a href="/hasznalati-feltetelek">használati feltételek</a></p>
+	</footer>
+
+</body>
+
+</html>
